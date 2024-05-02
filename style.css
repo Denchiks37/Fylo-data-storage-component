@@ -134,8 +134,8 @@ body {
 }
 
 .overall {
-  width: 100%;
-  height: 20px;
+  min-width: 100%;
+  min-height: 20px;
   background-color: var(--very-dark-blue);
   border-radius: 30px;
   margin-top: 8px;
@@ -145,8 +145,8 @@ body {
 
 .used {
   background: linear-gradient(90deg, var(--gradient));
-  width: 81.5%;
-  height: 70%;
+  min-width: 81.5%;
+  min-height: 70%;
   border-radius: 30px;
   margin: 4px;
   display: flex;
@@ -208,5 +208,48 @@ span {
   border-top: 34px solid white;
 }
 
+.icon:hover {
+  cursor: pointer;
+  background-color: var(--pale-blue);
+}
+
 @media (max-width: 970px) {
+  body {
+    min-height: 100vh;
+    background-image: url(images/bg-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .bg {
+    display: none;
+  }
+
+  .main {
+    flex-direction: column;
+    padding: 35px 0;
+    gap: 16px;
+  }
+
+  .right-card {
+    max-height: none;
+    min-width: 350px;
+  }
+
+  .triangle {
+    display: none;
+  }
+
+  .storage-left {
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    padding: 12px;
+    top: auto;
+  }
+
+  .overall-gb {
+    font-size: 14px;
+  }
 }
